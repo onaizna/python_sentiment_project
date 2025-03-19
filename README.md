@@ -1,4 +1,4 @@
-# Sentiment Analysis Pipeline
+# Sentiment Analysis Pipeline by Lorenzo Forcucci
 
 This project performs sentiment analysis on tweets using machine learning models. The pipeline includes data loading, preprocessing, model training, evaluation, and result storage in an SQLite database.
 
