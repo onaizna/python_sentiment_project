@@ -28,19 +28,5 @@ def main():
     logging.info("Training the model...")
     train_model()
 
-    # # Step 4: Evaluate model performance
-    # logging.info("Evaluating the model...")
-    # evaluate_model(model, vectorizer, config.DATABASE_PATH)
-
-    # # Step 5: Predict sentiment on new/processed data
-    # logging.info("Making predictions...")
-    # predictions = predict_sentiment(model, vectorizer, config.DATABASE_PATH)
-
-    # # Step 6: Save results to the database
-    # logging.info("Saving predictions to database...")
-    # save_predictions(predictions, config.DATABASE_PATH)
-
-    # logging.info("Sentiment Analysis Pipeline completed successfully!")
-
 if __name__ == "__main__":
     main()
