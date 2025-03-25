@@ -11,9 +11,6 @@ import sys
 sys.path.append(os.path.abspath('..'))  # Adds the parent directory to sys.path
 
 import logging
-# Set up logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-
 
 def load_data():
     """Loads data from the SQLite database."""

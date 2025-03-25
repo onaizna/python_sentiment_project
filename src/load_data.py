@@ -7,8 +7,6 @@ sys.path.append(os.path.abspath('..'))  # Adds the parent directory to sys.path
 from src import config
 
 import logging
-# Set up logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def load_data():
     logging.info('Opening Excel Files...')
