@@ -10,6 +10,9 @@ This project performs sentiment analysis on tweets using machine learning models
 │── database/                      # SQLite database and schema
 │── logs/                          # Logs for debugging
 │   ├── pipeline.log               # Log file capturing pipeline execution
+│── models/                        # Tmporary store for Models
+│   ├── random_forest.pickle       # raondm forest trained model in python serialized object format
+│   ├── vetcorizer.pickle          # text vectorization model in python serialized object format
 │── notebooks/                     # Jupyter notebooks for analysis
 │── src/                           # Source code
 │   ├── config.py                  # Configuration settings
@@ -18,6 +21,6 @@ This project performs sentiment analysis on tweets using machine learning models
 │   ├── make_model.py              # Model training & prediction
 │── scripts/                       # Scripts for execution
 │   ├── run_pipeline.py            # End-to-end execution
-│── requirements.txt               # Dependencies
+│── requirements.txt               # Dependencies 2DO!
 │── README.md                      # Project documentation
 ```
