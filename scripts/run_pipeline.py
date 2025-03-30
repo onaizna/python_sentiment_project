@@ -11,7 +11,7 @@ from src.make_model import train_model
 # from src.save_results import save_predictions
 
 # Set up logging
-logging.basicConfig(filename='../log/pipeline.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(filename='../logs/pipeline.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def main():
     logging.info("Starting Sentiment Analysis Pipeline...")

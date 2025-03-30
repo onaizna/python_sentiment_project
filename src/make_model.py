@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import os
+import pickle
 import sys
 sys.path.append(os.path.abspath('..'))  # Adds the parent directory to sys.path
 
@@ -33,6 +34,10 @@ def train_model(grid_search=False):
     X = vectorizer.fit_transform(df['cleaned_text'])
     y = df['sentiment']
 
+    # Saving model vectorizer
+    with open(f"{config.MODELS_PATH}vectorizer.pickle", "wb") as f:
+        pickle.dump(vectorizer, f)
+
     # Train-test split (preserve indices)
     X_train, X_test, y_train, y_test, train_idx, test_idx = train_test_split(
         X, y, df_indices, test_size=0.2, random_state=42
@@ -56,6 +61,10 @@ def train_model(grid_search=False):
         rf = RandomForestClassifier()
         rf.fit(X_train, y_train)
         y_pred = rf.predict(X_test)
+    
+    # Saving model random_forest
+    with open(os.path.join(config.MODELS_PATH, "random_forest.pickle"), "wb") as file:
+        pickle.dump(rf, file)
 
     # Create a DataFrame for the test set with predictions
     test_df = df.loc[test_idx].copy()  # Copy test set rows

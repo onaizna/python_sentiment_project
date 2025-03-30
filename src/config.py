@@ -6,6 +6,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Paths for raw data (Excel files)
 RAW_DATA_PATH = os.path.join(BASE_DIR, "../data/raw/")
 
+# Path for manual preprocessing
+LOADING_DATA_PATH = os.path.join(BASE_DIR, "../src/")
+
 # SQLite Database Path
 DATABASE_PATH = os.path.join(BASE_DIR, "../database/sentiment.db")
 
@@ -24,3 +27,5 @@ EVALUATION_TABLE = "grid_search_results"
 # Logging Configuration
 LOGGING_LEVEL = "INFO"
 
+# Saved models
+MODELS_PATH = "../models/"
