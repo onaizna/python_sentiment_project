@@ -1,6 +1,8 @@
 *.xlsx
 *.log
 
+database/sentiment.db
+
 database/
 models/
 logs/
