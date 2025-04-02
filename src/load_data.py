@@ -23,6 +23,13 @@ def load_data():
     fifa = fifa[['Tweet', 'Sentiment']]
     fifa.columns = ['text', 'sentiment']
     generic = generic[['text', 'sentiment']]
+    
+    # removing duplicates in every dataframe
+    e1_dedup = e1.drop_duplicates()
+    e2_dedup = e2.drop_duplicates()
+    fifa_dedup = fifa.drop_duplicates()
+    generic_dedup = generic.drop_duplicates()
+
     df = pd.concat([e1, e2, fifa, generic])
     df.reset_index(drop=True, inplace=True)
     
